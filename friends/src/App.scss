@@ -1,0 +1,101 @@
+h4 {
+	color: rgb(6, 72, 214);
+
+	span {
+		color: black;
+	}
+}
+
+button {
+	background-color: white;
+	border: 2px solid #4CAF50;
+	color: black;
+	padding: 12px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #4CAF50;
+		  color: white;
+	}
+}
+
+.friend-card {
+	border: 1px solid black;
+    width: 49%;
+	margin: 15px auto;
+	padding: 10px;
+
+	.ed {
+		border: 2px solid rgb(9, 193, 218);
+
+		&:hover {
+			background-color: rgb(9, 193, 218);
+			color: white;
+		}
+	}
+
+	.friend-card-buttons {
+		margin-top: 15px;
+	}
+
+	.back {
+		border: 2px solid rgb(255, 188, 3);
+
+		&:hover {
+			background-color: rgb(255, 188, 3);
+			color: white;
+		}
+	}
+	
+	.del {
+		border: 2px solid red;
+		
+		&:hover {
+			background-color: red;
+			color: white;
+		}
+	}
+}
+
+.title-top {
+
+	text-align: center;
+
+}
+
+.form {
+	margin: 0 auto;
+    width: 30%;
+    border: black solid 1px;
+	padding: 15px;
+
+	.form-title {
+		display: inline;
+	}
+	
+	.form-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		button {
+			margin-top: 25px;
+			margin-left: 0px;
+		}
+	}
+
+	button {
+		margin-left: 90px;
+	}
+
+	input {
+		height: 30px;
+		
+	}
+}
