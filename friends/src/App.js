@@ -24,6 +24,12 @@ class App extends React.Component {
 				console.log('Server Error', error)
 			}) 
   }
+
+  editUpdate = (newData) => {
+    this.setState({
+      friendsList: newData
+    })
+  }
   
  render() {
     return (
@@ -53,6 +59,7 @@ class App extends React.Component {
         path="/friend:id/edit"
         render={props => (
           <EditFriendForm 
+          editUpdate={this.editUpdate}
           friendsList={this.state.friendsList} 
           {...props}    
           />

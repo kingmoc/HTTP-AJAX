@@ -20,8 +20,8 @@ class AddFriendForm extends Component {
 	}
 
 	handleChanges = e => {
-		console.log(e.target.name)
-		console.log(e.target.value)
+		// console.log(e.target.name)
+		// console.log(e.target.value)
 		this.setState({
 			newFriend: { 
 				...this.state.newFriend,
