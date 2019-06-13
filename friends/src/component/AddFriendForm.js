@@ -56,6 +56,7 @@ class AddFriendForm extends Component {
 					<div>
 						<h3> Name: </h3>
 						<input 
+						minlength="5"
 						type="text" 
 						value={this.state.newFriend.name}
 						name="name"
@@ -66,7 +67,9 @@ class AddFriendForm extends Component {
 					<div>
 						<h3> Age: </h3>
 						<input 
-						type="text" 
+						minlength="1"
+						maxLength="3"
+						type="number" 
 						value={this.state.newFriend.age}
 						name="age"
 						onChange={this.handleChanges}
@@ -76,7 +79,8 @@ class AddFriendForm extends Component {
 					<div>
 						<h3> Email: </h3>
 						<input 
-						type="text" 
+						minlength="1"
+						type="email" 
 						value={this.state.newFriend.email}
 						name="email"
 						onChange={this.handleChanges}

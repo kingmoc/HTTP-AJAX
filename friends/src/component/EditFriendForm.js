@@ -5,7 +5,7 @@ class EditFriendForm extends Component {
 
 	state = {
 		editFriend: {
-			id: Math.floor(Math.random() * (92) + 8),
+			
 			name: "",
 			age: "",
 			email: ""
@@ -19,14 +19,24 @@ class EditFriendForm extends Component {
 	}
 	
 	componentDidMount() {
+		let editId = []
+		this.props.friendsList.map((friend, i, array) => {
+			if(friend.id == this.props.match.params.id) {
+				return editId.push(i)
+			};
+		});		
+		
 		this.setState({
 			editFriend: {
-				id: Math.floor(Math.random() * (92) + 8),
-				name: this.props.friendsList[this.props.match.params.id -1].name,
-				age: this.props.friendsList[this.props.match.params.id -1].age,
-				email: this.props.friendsList[this.props.match.params.id -1].email
+				id: this.props.match.params.id,
+				name: this.props.friendsList[editId[0]].name,
+				age: this.props.friendsList[editId[0]].age,
+				email: this.props.friendsList[editId[0]].email
 			}
 		})
+
+		//console.log(this.props.friendsList)
+		console.log(editId[0])
 	}
 
 	editFriend = e => {
